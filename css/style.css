@@ -4,12 +4,10 @@ body {
     rgba(160, 132, 232) 15%,
     rgba(111, 97, 192, 0.28) 75%
   );
-  background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 100vh;
+  margin: 0;
   font-family: "Inter", sans-serif !important;
   color: #02020a !important;
-  margin: 0px;
 }
 
 h1 {
@@ -67,10 +65,11 @@ select {
 }
 
 .container {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .wrapper {
@@ -113,6 +112,7 @@ select {
 }
 
 footer {
+  padding: 50px 0;
   font-size: 13px;
   text-align: center;
 }
