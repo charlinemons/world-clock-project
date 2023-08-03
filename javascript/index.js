@@ -18,6 +18,28 @@ function updateTime() {
 
   lyonDateElement.innerHTML = lyonTime.format("MMMM, dddd Do");
   lyonTimeElement.innerHTML = lyonTime.format("h:mm:ss [<small>]A[</small>]");
+
+  // hogsmeade
+  let hogsmeadeElement = document.querySelector("#hogsmeade");
+  let hogsmeadeDateElement = hogsmeadeElement.querySelector("span.date");
+  let hogsmeadeTimeElement = hogsmeadeElement.querySelector(".time");
+  let hogsmeadeTime = moment().tz("Europe/Dublin");
+
+  hogsmeadeDateElement.innerHTML = hogsmeadeTime.format("MMMM, dddd Do");
+  hogsmeadeTimeElement.innerHTML = hogsmeadeTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+
+  // Radiator Springs
+  let lavenderTownElement = document.querySelector("#lavender-town");
+  let lavenderTownDateElement = lavenderTownElement.querySelector("span.date");
+  let lavenderTownTimeElement = lavenderTownElement.querySelector(".time");
+  let lavenderTownTime = moment().tz("Asia/Sakhalin");
+
+  lavenderTownDateElement.innerHTML = lavenderTownTime.format("MMMM, dddd Do");
+  lavenderTownTimeElement.innerHTML = lavenderTownTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
