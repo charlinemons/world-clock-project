@@ -1,5 +1,5 @@
 function updateTime() {
-  // Los Angeles
+  // Montreal
   let montrealElement = document.querySelector("#montreal");
   let montrealDateElement = montrealElement.querySelector("span.date");
   let montrealTimeElement = montrealElement.querySelector(".time");
@@ -10,7 +10,7 @@ function updateTime() {
     "h:mm:ss [<small>]A[</small>]"
   );
 
-  // lyon
+  // Lyon
   let lyonElement = document.querySelector("#lyon");
   let lyonDateElement = lyonElement.querySelector("span.date");
   let lyonTimeElement = lyonElement.querySelector(".time");
@@ -19,7 +19,18 @@ function updateTime() {
   lyonDateElement.innerHTML = lyonTime.format("MMMM, dddd Do");
   lyonTimeElement.innerHTML = lyonTime.format("h:mm:ss [<small>]A[</small>]");
 
-  // hogsmeade
+  // Raccoon City
+  let RaccoonCityElement = document.querySelector("#raccoon-city");
+  let RaccoonCityDateElement = RaccoonCityElement.querySelector("span.date");
+  let RaccoonCityTimeElement = RaccoonCityElement.querySelector(".time");
+  let RaccoonCityTime = moment().tz("Australia/Perth");
+
+  RaccoonCityDateElement.innerHTML = RaccoonCityTime.format("MMMM, dddd Do");
+  RaccoonCityTimeElement.innerHTML = RaccoonCityTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+
+  // Harry Potter
   let hogsmeadeElement = document.querySelector("#hogsmeade");
   let hogsmeadeDateElement = hogsmeadeElement.querySelector("span.date");
   let hogsmeadeTimeElement = hogsmeadeElement.querySelector(".time");
@@ -30,7 +41,7 @@ function updateTime() {
     "h:mm:ss [<small>]A[</small>]"
   );
 
-  // Radiator Springs
+  // LavenderTown
   let lavenderTownElement = document.querySelector("#lavender-town");
   let lavenderTownDateElement = lavenderTownElement.querySelector("span.date");
   let lavenderTownTimeElement = lavenderTownElement.querySelector(".time");
